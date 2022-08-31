@@ -1,6 +1,8 @@
 ## Seviye: Başlangıç
 
-## Bu senaryoda docker compose dosyasının nasıl hazırlandığını öğrenecek ve wordpress, phpMyAdmin, MySQL servislerinin çalıştığı bir uygulama ayağa kaldıracaksınız.
+## Bu senaryoda temel docker-compose bilgi komutlarını öğreneceksiniz.
+
+![](https://raw.githubusercontent.com/zeyneprumeysayorulmaz/bulut-bilisimciler-senaryo/main/img/compose_info.PNG)
 
 ## Talimatlar
 
