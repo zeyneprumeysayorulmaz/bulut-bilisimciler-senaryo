@@ -69,39 +69,6 @@ print(x)
 ````
 Output: Bulut Bilisimciler
 ````
-
-Bir değişkenin veri tipini belitmek isterseniz bunu casting ile yapmalısınız.
-
-````
-x = str(3)    # x will be '3'
-y = int(3)    # y will be 3
-z = float(3)  # z will be 3.0
-
-print(x)
-print(y)
-print(z)
-````
-
-````
-3
-3
-3.0
-````
-
-type() fonksiyonu ile bir değişkenin veri türünü elde edebilirsiniz.
-
-````
-x = 5
-y = "Bulut Bilisimciler"
-print(type(x))
-print(type(y))
-````
-````
-Output: 
-<class 'int'>
-<class 'str'>
-````
-
 String değişkenler tek tırnak veya çift tırnak içinde belirtilebilir. y değişkenine aşağıdaki gibi değişken atamanız aynıdır.
 
 ````
@@ -187,7 +154,7 @@ Platformu
 Aynı zamanda bir değeri birden fazla değişkene bir satırda atayabilirsiniz.
 
 ````
-x, y, z = "Bulut Bilisimciler"
+x = y = z = "Bulut Bilisimciler"
 print(x)
 print(y)
 print(z)
@@ -214,3 +181,47 @@ go
 python
 java
 ````
+
+print() fonksiyonu ile birden fazla değişkeni ekrana yazdırabilirsiniz. Bunun için virgül (,) veya (+) kullanabilirsiniz. Bulut ve Bilisimciler kelimelerinden sonra boşluk karekteri bırakıldığına dikkat edin, bunlar olmadan sonuç `BulutBilisimcilerPlatformu` olacaktır.
+````
+x="Bulut "
+y="Bilisimciler "
+z="Platformu"
+print(x, y, z)
+print(x + y + z)
+````
+````
+Output:
+Bulut  Bilisimciler  Platformu
+Bulut Bilisimciler Platformu
+````
+Dikkat etmeniz gereken sayılar için artı(+) karakterinin matematiksel bir fonksiyon olarak çalıştığıdır. 
+
+````
+x=5
+y=10
+z=15
+print(x, y, z)
+print(x + y + z)
+````
+````
+Output:
+5 10 15
+30
+````
+
+Bir diğer dikkat etmeniz gereken nokta artı(+) operatörüyle bir string ve sayı değişkenini ekrana yazdırmaya çalıştığınızda hata alacağınızdır.
+
+````
+x=5
+y="Bulut "
+print(x + y)
+````
+````
+Output:
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+````
+İki farklı değişken tipiniz varsa virgül(,) kullanarak bunu yapmalısınız. `print(x, y)` komutu ile ile çıktının `5 bulut``olduğunu görebilirsiniz.
+
