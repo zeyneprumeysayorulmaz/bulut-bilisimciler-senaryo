@@ -14,7 +14,7 @@ Bu bölümde imperative yöntemle ve deklarative yöntemle deployment objesi olu
 
 Pod bölümünde, podların kubernetesin en temel objesi olduğuna değinmiştik. Bizler kubernetesde container imajına çevirdiğimiz uygulamalarımızı pod olarak deploy ederiz. Genelde kubernetes üzerinde singleton olarak adlandırılan tekil, yönetilmeyen podlar yaratmayız. Podları yöneten üst seviye objeler yaratırız ve podlar bu objeler tarafından yaratılıp, yönetilir. Bu objelerin en sık kullanılanlarından bir tanesi **deployment** objesidir. Neredeyse iş yüklerinin tamamı deployment objesi olarak deploy edilir.
 
-``kubectl create deployment uygulama1 --image=nginx:latest --replicas=3`` komutu ile imperative olarak bir deployment objesi oluşturabiliriz. Oluşturmak istediğim obje tipinin **deployment** olduğunu söyledim, buna bir isim verdim ve oluşturmak istediğim container imajının **nginx** olmasını , **-replicas** ile de kaç adet pod oluşturacağımı belirttim.
+``kubectl create deployment uygulama1 --image=nginx:latest --replicas=3`` komutu ile imperative olarak bir deployment objesi oluşturabiliriz. Oluşturmak istediğim obje tipinin **deployment** olduğunu söyledim, buna bir isim verdim ve oluşturmak istediğim container imajının **nginx** olmasını , **--replicas** ile de kaç adet pod oluşturacağımı belirttim.
 
 ``kubectl get deployment`` ile bu obje tanımına bakabiliriz.
 
@@ -76,7 +76,7 @@ Bir deployment objesi oluşturduğumuz zaman bu deployment objesi kendi yönetti
 
 Aşağıdaki gibi bir yaml dosyasını oluşturarak manuel olarak replicaSet objesi yaratılabilir. Fakat ReplicaSet; rollout, undo gibi özellikleri bize sunmadığı için replicaSet yaratmak yerine deployment yaratırız ve deployment bu replicaSeti yaratır, bizde bu işlemlerimizi gerçekleştirebiliyor oluruz.
 
-``vi replicaset.yaml`
+`vi replicaset.yaml`
 
 ````
 apiVersion: apps/v1
@@ -102,7 +102,7 @@ spec:
         - containerPort: 80
 ````
 
-``kubectl apply -f replicaset.yaml`
+`kubectl apply -f replicaset.yaml`
 ## Senaryo 7
 
 ### Rollout ve Rollback
