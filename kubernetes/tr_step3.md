@@ -1,6 +1,6 @@
 ## Öğrenme Hedefleri
 
-Bu eğitim senaryosunda kubernetes objelerinden biri olan deployment objesine değinecek, aynı zamanda kubernetes platfromunda bir deployment ve replicaSet objelerini oluşturabilmeyi öğreneceksiniz. Aynı zamanda Rollout ve Rollback konusuna da hakim olacaksınız.
+Bu eğitim senaryosunda kubernetes objelerinden biri olan deployment objesine değinecek, aynı zamanda kubernetes platformunda bir deployment ve replicaSet objelerini oluşturabilmeyi öğreneceksiniz. Aynı zamanda Rollout ve Rollback konusuna da hakim olacaksınız.
 
 ## Ön gereksinimler
 
@@ -11,6 +11,8 @@ Bu eğitim senaryosunda kubernetes objelerinden biri olan deployment objesine de
 ### Deployment Objesi
 
 Bu bölümde imperative yöntemle ve deklarative yöntemle deployment objesi oluşturacağız.
+
+![](https://raw.githubusercontent.com/zeyneprumeysayorulmaz/bulut-bilisimciler-senaryo/main/kubernetes/img/deployment.JPG)
 
 Pod bölümünde, podların kubernetesin en temel objesi olduğuna değinmiştik. Bizler kubernetesde container imajına çevirdiğimiz uygulamalarımızı pod olarak deploy ederiz. Genelde kubernetes üzerinde singleton olarak adlandırılan tekil, yönetilmeyen podlar yaratmayız. Podları yöneten üst seviye objeler yaratırız ve podlar bu objeler tarafından yaratılıp, yönetilir. Bu objelerin en sık kullanılanlarından bir tanesi **deployment** objesidir. Neredeyse iş yüklerinin tamamı deployment objesi olarak deploy edilir.
 
@@ -69,6 +71,8 @@ spec:
 ### ReplicaSet Objesi
 
 Bu bölümde bir replicaset objesinin görevini öğrenecek ve replicaset objesi oluşturmayı öğreneceğiz.
+
+![](https://raw.githubusercontent.com/zeyneprumeysayorulmaz/bulut-bilisimciler-senaryo/main/kubernetes/img/replicas.JPG)
 
 **Bir replicaSet’in amacı, herhangi bir zamanda çalışan kararlı bir replika pod setini sürdürmektir. Bu nedenle, genellikle belirli sayıda özdeş podun kullanılabilirliğini garanti etmek için kullanılır.**
 
