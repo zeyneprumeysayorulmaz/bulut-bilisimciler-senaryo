@@ -18,6 +18,8 @@ Bu eğitim senaryosunda label, selector ve annotation kavramlarını öğrenecek
 
 Bu bölümde geçtiğimiz senaryoda öğrendiğimiz pod objesi üzerinden **label, selector** ve **annotations** pratikleri yapacağız.
 
+![](https://raw.githubusercontent.com/zeyneprumeysayorulmaz/bulut-bilisimciler-senaryo/main/kubernetes/img/labelselector.JPG)
+
 Aşağıdaki yaml dosyasını oluşturarak bir pod objesi oluşturalım ve prtaiklere başlayalım. Pod objesini tanımlarken label anahtarını kulanarak label ekleyebiliriz.
 
 `vi pod2.yaml`
