@@ -1,0 +1,32 @@
+{
+    "scenario": {
+      "steps": [
+        {
+          "text": "tr_step1.md"
+        },
+        {
+          "text": "tr_step2.md",
+          "verify":"verify2.json"
+        },
+        {
+          "text": "tr_step3.md"
+        },
+        {
+          "text": "tr_step4.md"
+        }
+      ],
+      "intro": {
+        "text": "tr_intro.md"
+      },
+      "finish": {
+        "text": "tr_finish.md"
+      },
+      "video": {}
+    },
+    "environment": {
+      "uilayout": "editor-terminal"
+    },
+    "backend": {
+      "imageid": "centos"
+    }
+  }
